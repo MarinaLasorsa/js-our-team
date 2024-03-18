@@ -54,10 +54,10 @@ Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e 
 for (let i = 0; i < team.length; i++) {
     const currentMember = team[i];
     //console.log(currentMember);
-    const memberInfo = `
-    Nome: ${currentMember.name},
-    Ruolo: ${currentMember.role}, 
-    Foto: <img src="./img/${currentMember.photo}">`;
+    //const memberInfo = `
+    //Nome: ${currentMember.name},
+    //Ruolo: ${currentMember.role}, 
+    //Foto: <img src="./img/${currentMember.photo}">`;
     //console.log(memberInfo);
 
     /*ESERCIZIO:
@@ -68,7 +68,14 @@ for (let i = 0; i < team.length; i++) {
     divMemberElement.classList.add("col");
 
     //inserire in elemento con innerHTML la variabile memberInfo
-    divMemberElement.innerHTML = `${memberInfo}`;
+    divMemberElement.innerHTML = `
+        <div class="card text-center">
+            <img src="./img/${currentMember.photo}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">${currentMember.name}</h5>
+                <h6 class="card-text">${currentMember.role}</p>
+            </div>
+        </div> `;
     //console.log di elemento div
     console.log(divMemberElement);
 
