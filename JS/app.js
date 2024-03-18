@@ -58,5 +58,22 @@ for (let i = 0; i < team.length; i++) {
     Nome: ${currentMember.name},
     Ruolo: ${currentMember.role}, 
     Foto: ${currentMember.photo}`;
-    console.log(memberInfo);
+    //console.log(memberInfo);
+
+    /*ESERCIZIO:
+    Stampare le stesse informazioni su DOM semplicemente come stringhe*/
+
+    //sempre in ciclo for: creare elemento div membro
+    const divMemberElement = document.createElement("div");
+
+    //inserire in elemento con innerHTML la variabile memberInfo
+    divMemberElement.innerHTML = `${memberInfo}`;
+    //console.log di elemento div
+    console.log(divMemberElement);
 }
+
+
+
+
+
+
