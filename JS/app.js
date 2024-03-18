@@ -57,7 +57,7 @@ for (let i = 0; i < team.length; i++) {
     const memberInfo = `
     Nome: ${currentMember.name},
     Ruolo: ${currentMember.role}, 
-    Foto: ${currentMember.photo}`;
+    Foto: <img src="./img/${currentMember.photo}">`;
     //console.log(memberInfo);
 
     /*ESERCIZIO:
@@ -65,11 +65,15 @@ for (let i = 0; i < team.length; i++) {
 
     //sempre in ciclo for: creare elemento div membro
     const divMemberElement = document.createElement("div");
+    divMemberElement.classList.add("col");
 
     //inserire in elemento con innerHTML la variabile memberInfo
     divMemberElement.innerHTML = `${memberInfo}`;
     //console.log di elemento div
     console.log(divMemberElement);
+
+    const divRowElement = document.querySelector(".row");
+    divRowElement.append(divMemberElement);
 }
 
 
